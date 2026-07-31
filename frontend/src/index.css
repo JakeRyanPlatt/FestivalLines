@@ -69,6 +69,8 @@ html.lenis, html.lenis body{
     filter: invert(1) brightness(2);
   }
 }
+/*display: flex + place-items: center vertically centers #root as a single flex item */
+/*fix this with changing body to min-width: 320px;  */
 
 #root {
   width: 1126px;
@@ -82,8 +84,10 @@ html.lenis, html.lenis body{
   box-sizing: border-box;
 }
 
+/* Lenis's (lenis/dist/lenis.css) already handles html, body { height: auto } correctly on its own*/
 body {
   margin: 0;
+  min-width: 320px;
 }
 
 h1,
