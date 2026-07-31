@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import LineupWireframe from './components/LineupWireframe'
+import RevealPatternsDemo from './components/RevealPatternsDemo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,10 @@ function App() {
 
       <section id="lineup">
         <LineupWireframe />
+      </section>
+
+      <section id="motion-starter">
+        <RevealPatternsDemo />
       </section>
 
       <section id="spacer">
