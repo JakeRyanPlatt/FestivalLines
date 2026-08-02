@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './DabbLoungeExperience.css'
+import './FestivalExperience.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,7 +32,7 @@ const cards = [
   },
 ]
 
-export function DabbLoungeExperience() {
+export function FestivalExperience() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const headerRef = useRef<HTMLDivElement | null>(null)
   const cardRefs = useRef<Array<HTMLElement | null>>([])
@@ -77,47 +77,47 @@ export function DabbLoungeExperience() {
   }, [])
 
   return (
-    <section className="dabb-experience" ref={sectionRef} aria-labelledby="dabb-experience-title">
-      <div className="dabb-experience__header" ref={headerRef}>
-        <div className="dabb-experience__intro">
-          <div className="dabb-experience__eyebrow">
-            <span className="dabb-experience__eyebrow-mark" aria-hidden="true" />
+    <section className="festival-experience" ref={sectionRef} aria-labelledby="festival-experience-title">
+      <div className="festival-experience__header" ref={headerRef}>
+        <div className="festival-experience__intro">
+          <div className="festival-experience__eyebrow">
+            <span className="festival-experience__eyebrow-mark" aria-hidden="true" />
             <span>Experience</span>
           </div>
 
-          <div className="dabb-experience__intro-row">
-            <h2 className="dabb-experience__title-block" id="dabb-experience-title">
+          <div className="festival-experience__intro-row">
+            <h2 className="festival-experience__title-block" id="festival-experience-title">
               Experience
             </h2>
-            <p className="dabb-experience__copy-block">
+            <p className="festival-experience__copy-block">
               A modernist compound of sonic rituals, industrial markets, and high-tech wellness—built for the megacity perimeter.
             </p>
           </div>
         </div>
 
-        <div className="dabb-experience__feature" aria-hidden="true">
-          <div className="dabb-experience__stars" />
-          <div className="dabb-experience__stars dabb-experience__stars--secondary" />
-          <div className="dabb-experience__stars dabb-experience__stars--tertiary" />
-          <div className="dabb-experience__feature-overlay" />
+        <div className="festival-experience__feature" aria-hidden="true">
+          <div className="festival-experience__stars" />
+          <div className="festival-experience__stars festival-experience__stars--secondary" />
+          <div className="festival-experience__stars festival-experience__stars--tertiary" />
+          <div className="festival-experience__feature-overlay" />
         </div>
       </div>
 
-      <div className="dabb-experience__grid" role="list">
+      <div className="festival-experience__grid" role="list">
         {cards.map((card, index) => (
           <article
-            className="dabb-experience__card"
+            className="festival-experience__card"
             key={card.title}
             role="listitem"
             ref={(node) => {
               cardRefs.current[index] = node
             }}
           >
-            <img className="dabb-experience__image" src={card.image} alt="" />
-            <div className="dabb-experience__overlay" aria-hidden="true" />
-            <div className="dabb-experience__content">
-              <h3 className="dabb-experience__title">{card.title}</h3>
-              <p className="dabb-experience__copy">{card.copy}</p>
+            <img className="festival-experience__image" src={card.image} alt="" />
+            <div className="festival-experience__overlay" aria-hidden="true" />
+            <div className="festival-experience__content">
+              <h3 className="festival-experience__title">{card.title}</h3>
+              <p className="festival-experience__copy">{card.copy}</p>
             </div>
           </article>
         ))}
@@ -125,3 +125,4 @@ export function DabbLoungeExperience() {
     </section>
   )
 }
+

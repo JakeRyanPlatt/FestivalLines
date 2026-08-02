@@ -1,4 +1,4 @@
-.dabb-hero {
+.festival-hero {
   position: relative;
   min-height: 100svh;
   min-height: 100dvh;
@@ -10,12 +10,12 @@
   padding: 2rem 1.5rem;
 }
 
-.dabb-hero__backdrop {
+.festival-hero__backdrop {
   position: absolute;
   inset: 0;
 }
 
-.dabb-hero__image {
+.festival-hero__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -24,13 +24,13 @@
   will-change: transform;
 }
 
-.dabb-hero__overlay {
+.festival-hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(5, 5, 5, 0.3) 0%, rgba(5, 5, 5, 0.74) 100%);
 }
 
-.dabb-hero__content {
+.festival-hero__content {
   position: relative;
   z-index: 1;
   width: min(100%, 760px);
@@ -41,14 +41,14 @@
   text-align: center;
 }
 
-.dabb-hero__title-block {
+.festival-hero__title-block {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
 }
 
-.dabb-hero__eyebrow {
+.festival-hero__eyebrow {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 800;
@@ -57,7 +57,7 @@
   color: #f8f7f3;
 }
 
-.dabb-hero__headline {
+.festival-hero__headline {
   margin: 0;
   font-size: clamp(3.5rem, 9vw, 7rem);
   line-height: 0.9;
@@ -67,7 +67,7 @@
   color: #f8f7f3;
 }
 
-.dabb-hero__details {
+.festival-hero__details {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +75,8 @@
   color: #f8f7f3;
 }
 
-.dabb-hero__date,
-.dabb-hero__venue {
+.festival-hero__date,
+.festival-hero__venue {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
@@ -84,18 +84,18 @@
   text-transform: uppercase;
 }
 
-.dabb-hero__date {
+.festival-hero__date {
   color: #d4a056;
 }
 
-.dabb-hero__divider {
+.festival-hero__divider {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #d1d5db;
 }
 
-.dabb-hero__nav {
+.festival-hero__nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -103,8 +103,8 @@
   margin-top: 0.5rem;
 }
 
-.dabb-hero__pill,
-.dabb-hero__cta {
+.festival-hero__pill,
+.festival-hero__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -124,23 +124,23 @@
   will-change: transform;
 }
 
-.dabb-hero__pill:hover,
-.dabb-hero__cta:hover {
+.festival-hero__pill:hover,
+.festival-hero__cta:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.26);
 }
 
-.dabb-hero__cta {
+.festival-hero__cta {
   margin-top: 0.25rem;
   background: #f8f7f3;
   color: #0b0b0b;
 }
 
-.dabb-hero__cta:hover .dabb-hero__arrow {
+.festival-hero__cta:hover .festival-hero__arrow {
   transform: translateX(4px);
 }
 
-.dabb-hero__arrow {
+.festival-hero__arrow {
   width: 18px;
   height: 18px;
   display: block;
@@ -148,20 +148,21 @@
 }
 
 @media (max-width: 640px) {
-  .dabb-hero {
+  .festival-hero {
     padding: 1.25rem 1rem;
   }
 
-  .dabb-hero__eyebrow {
+  .festival-hero__eyebrow {
     font-size: 1rem;
   }
 
-  .dabb-hero__headline {
+  .festival-hero__headline {
     font-size: clamp(2.75rem, 14vw, 4rem);
   }
 
-  .dabb-hero__date,
-  .dabb-hero__venue {
+  .festival-hero__date,
+  .festival-hero__venue {
     font-size: 0.85rem;
   }
 }
+

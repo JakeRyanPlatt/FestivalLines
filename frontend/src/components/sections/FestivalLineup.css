@@ -1,4 +1,4 @@
-.dabb-lineup {
+.festival-lineup {
   min-height: 100svh;
   min-height: 100dvh;
   padding: 6rem 1.5rem;
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-.dabb-lineup__header {
+.festival-lineup__header {
   max-width: 1200px;
   margin: 0 auto 2rem;
   display: flex;
@@ -17,7 +17,7 @@
   gap: 1.2rem;
 }
 
-.dabb-lineup__eyebrow {
+.festival-lineup__eyebrow {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -28,14 +28,14 @@
   text-transform: uppercase;
 }
 
-.dabb-lineup__eyebrow-mark {
+.festival-lineup__eyebrow-mark {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #cda467;
 }
 
-.dabb-lineup__intro-row {
+.festival-lineup__intro-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -43,7 +43,7 @@
   flex-wrap: wrap;
 }
 
-.dabb-lineup__title {
+.festival-lineup__title {
   margin: 0;
   font-size: clamp(2.4rem, 4.5vw, 3.25rem);
   line-height: 1.05;
@@ -51,7 +51,7 @@
   text-transform: uppercase;
 }
 
-.dabb-lineup__copy {
+.festival-lineup__copy {
   max-width: 420px;
   margin: 0;
   font-size: 1rem;
@@ -59,7 +59,7 @@
   color: #b0b0b0;
 }
 
-.dabb-lineup__tabs {
+.festival-lineup__tabs {
   max-width: 1200px;
   margin: 0 auto 3rem;
   display: flex;
@@ -67,7 +67,7 @@
   gap: 0.75rem;
 }
 
-.dabb-lineup__tab {
+.festival-lineup__tab {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   padding: 0.7rem 1.15rem;
@@ -81,13 +81,13 @@
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.dabb-lineup__tab.is-active {
+.festival-lineup__tab.is-active {
   background: #f7f6f2;
   border-color: #f7f6f2;
   color: #0b0b0b;
 }
 
-.dabb-lineup__content {
+.festival-lineup__content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -95,39 +95,39 @@
   gap: 1.3rem;
 }
 
-.dabb-lineup__row {
+.festival-lineup__row {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.25rem;
   align-items: center;
 }
 
-.dabb-lineup__row--headliners {
+.festival-lineup__row--headliners {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
   line-height: 1.05;
 }
 
-.dabb-lineup__row--support {
+.festival-lineup__row--support {
   font-size: clamp(1.2rem, 2vw, 1.7rem);
   font-weight: 700;
   color: #f0ebdd;
 }
 
-.dabb-lineup__row--undercard {
+.festival-lineup__row--undercard {
   font-size: 1rem;
   font-weight: 600;
   color: #8f8d84;
   letter-spacing: 0.03em;
 }
 
-.dabb-lineup__artist {
+.festival-lineup__artist {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
 }
 
-.dabb-lineup__separator {
+.festival-lineup__separator {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -135,7 +135,7 @@
   display: inline-block;
 }
 
-.dabb-lineup__divider {
+.festival-lineup__divider {
   width: 100%;
   height: 1px;
   background: rgba(255, 255, 255, 0.16);
@@ -143,16 +143,17 @@
 }
 
 @media (max-width: 780px) {
-  .dabb-lineup {
+  .festival-lineup {
     padding: 4.5rem 1rem;
   }
 
-  .dabb-lineup__intro-row {
+  .festival-lineup__intro-row {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .dabb-lineup__copy {
+  .festival-lineup__copy {
     max-width: none;
   }
 }
+

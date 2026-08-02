@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './DabbLoungeVenue.css'
+import './FestivalVenue.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -26,7 +26,7 @@ const details = [
   },
 ]
 
-export function DabbLoungeVenue() {
+export function FestivalVenue() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const cardRefs = useRef<Array<HTMLElement | null>>([])
 
@@ -56,45 +56,45 @@ export function DabbLoungeVenue() {
   }, [])
 
   return (
-    <section className="dabb-venue" ref={sectionRef} aria-labelledby="dabb-venue-title">
-      <div className="dabb-venue__header">
-        <div className="dabb-venue__eyebrow">
-          <span className="dabb-venue__eyebrow-mark" aria-hidden="true" />
+    <section className="festival-venue" ref={sectionRef} aria-labelledby="festival-venue-title">
+      <div className="festival-venue__header">
+        <div className="festival-venue__eyebrow">
+          <span className="festival-venue__eyebrow-mark" aria-hidden="true" />
           <span>The Location</span>
         </div>
 
-        <div className="dabb-venue__intro">
-          <h2 className="dabb-venue__title" id="dabb-venue-title">
+        <div className="festival-venue__intro">
+          <h2 className="festival-venue__title" id="festival-venue-title">
             Atelier Bruckner | Stuttgart
           </h2>
-          <p className="dabb-venue__copy">
+          <p className="festival-venue__copy">
             A world-renowned scenography studio turned festival ground. Three nights inside Stuttgart&apos;s most immersive architectural space — where light, sound, and spatial narrative converge.
           </p>
         </div>
       </div>
 
-      <div className="dabb-venue__content">
-        <div className="dabb-venue__image-wrap" aria-hidden="true">
+      <div className="festival-venue__content">
+        <div className="festival-venue__image-wrap" aria-hidden="true">
           <img
-            className="dabb-venue__image"
+            className="festival-venue__image"
             src="https://www.figma.com/api/mcp/asset/b542d229-60b1-4a95-af98-61997967ccde"
             alt=""
           />
-          <div className="dabb-venue__image-overlay" />
+          <div className="festival-venue__image-overlay" />
         </div>
 
-        <div className="dabb-venue__details" role="list">
+        <div className="festival-venue__details" role="list">
           {details.map((detail, index) => (
             <article
-              className="dabb-venue__detail"
+              className="festival-venue__detail"
               key={detail.number}
               role="listitem"
               ref={(node) => {
                 cardRefs.current[index] = node
               }}
             >
-              <div className="dabb-venue__detail-label">
-                <span className="dabb-venue__detail-number">{detail.number}</span>
+              <div className="festival-venue__detail-label">
+                <span className="festival-venue__detail-number">{detail.number}</span>
                 <h3>{detail.title}</h3>
               </div>
               <p>{detail.copy}</p>
@@ -105,3 +105,4 @@ export function DabbLoungeVenue() {
     </section>
   )
 }
+

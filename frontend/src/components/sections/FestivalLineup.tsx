@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './DabbLoungeLineup.css'
+import './FestivalLineup.css'
 
 type DayId = 'full' | 'fri' | 'sat' | 'sun'
 
@@ -79,43 +79,43 @@ function ArtistRow({ artists, className }: { artists: string[]; className: strin
   return (
     <div className={className}>
       {artists.map((artist, index) => (
-        <div className="dabb-lineup__artist" key={artist}>
+        <div className="festival-lineup__artist" key={artist}>
           <span>{artist}</span>
-          {index < artists.length - 1 ? <span className="dabb-lineup__separator" aria-hidden="true" /> : null}
+          {index < artists.length - 1 ? <span className="festival-lineup__separator" aria-hidden="true" /> : null}
         </div>
       ))}
     </div>
   )
 }
 
-export function DabbLoungeLineup() {
+export function FestivalLineup() {
   const [activeDay, setActiveDay] = useState<DayId>('full')
   const lineup = LINEUP[activeDay]
 
   return (
-    <section className="dabb-lineup" aria-labelledby="dabb-lineup-title">
-      <div className="dabb-lineup__header">
-        <div className="dabb-lineup__eyebrow">
-          <span className="dabb-lineup__eyebrow-mark" aria-hidden="true" />
+    <section className="festival-lineup" aria-labelledby="festival-lineup-title">
+      <div className="festival-lineup__header">
+        <div className="festival-lineup__eyebrow">
+          <span className="festival-lineup__eyebrow-mark" aria-hidden="true" />
           <span>The Soundsystem</span>
         </div>
 
-        <div className="dabb-lineup__intro-row">
-          <h2 className="dabb-lineup__title" id="dabb-lineup-title">
+        <div className="festival-lineup__intro-row">
+          <h2 className="festival-lineup__title" id="festival-lineup-title">
             2026 Lineup
           </h2>
-          <p className="dabb-lineup__copy">{lineup.intro}</p>
+          <p className="festival-lineup__copy">{lineup.intro}</p>
         </div>
       </div>
 
-      <div className="dabb-lineup__tabs" role="tablist" aria-label="Festival day">
+      <div className="festival-lineup__tabs" role="tablist" aria-label="Festival day">
         {DAYS.map((day) => (
           <button
             key={day.id}
             type="button"
             role="tab"
             aria-selected={activeDay === day.id}
-            className={`dabb-lineup__tab${activeDay === day.id ? ' is-active' : ''}`}
+            className={`festival-lineup__tab${activeDay === day.id ? ' is-active' : ''}`}
             onClick={() => setActiveDay(day.id)}
           >
             {day.label}
@@ -123,12 +123,13 @@ export function DabbLoungeLineup() {
         ))}
       </div>
 
-      <div className="dabb-lineup__content">
-        <ArtistRow artists={lineup.headliners} className="dabb-lineup__row dabb-lineup__row--headliners" />
-        <div className="dabb-lineup__divider" aria-hidden="true" />
-        <ArtistRow artists={lineup.support} className="dabb-lineup__row dabb-lineup__row--support" />
-        <ArtistRow artists={lineup.undercard} className="dabb-lineup__row dabb-lineup__row--undercard" />
+      <div className="festival-lineup__content">
+        <ArtistRow artists={lineup.headliners} className="festival-lineup__row festival-lineup__row--headliners" />
+        <div className="festival-lineup__divider" aria-hidden="true" />
+        <ArtistRow artists={lineup.support} className="festival-lineup__row festival-lineup__row--support" />
+        <ArtistRow artists={lineup.undercard} className="festival-lineup__row festival-lineup__row--undercard" />
       </div>
     </section>
   )
 }
+
