@@ -1,4 +1,4 @@
-.dabb-schedule {
+.festival-schedule {
   min-height: 100svh;
   min-height: 100dvh;
   padding: 6rem 1.5rem;
@@ -11,8 +11,8 @@
   overflow: hidden;
 }
 
-.dabb-schedule::before,
-.dabb-schedule::after {
+.festival-schedule::before,
+.festival-schedule::after {
   content: '';
   position: absolute;
   pointer-events: none;
@@ -20,14 +20,14 @@
   filter: blur(0.5px);
 }
 
-.dabb-schedule::before {
+.festival-schedule::before {
   inset: auto auto 8% -6%;
   width: 280px;
   height: 280px;
   background: radial-gradient(circle, rgba(205, 164, 103, 0.22), transparent 70%);
 }
 
-.dabb-schedule::after {
+.festival-schedule::after {
   inset: 8% -8% auto auto;
   width: 340px;
   height: 340px;
@@ -35,7 +35,7 @@
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.dabb-schedule__header {
+.festival-schedule__header {
   max-width: 1200px;
   margin: 0 auto 2.25rem;
   display: flex;
@@ -45,7 +45,7 @@
   z-index: 1;
 }
 
-.dabb-schedule__eyebrow {
+.festival-schedule__eyebrow {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -56,14 +56,14 @@
   text-transform: uppercase;
 }
 
-.dabb-schedule__eyebrow-mark {
+.festival-schedule__eyebrow-mark {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #cda467;
 }
 
-.dabb-schedule__intro-row {
+.festival-schedule__intro-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -71,7 +71,7 @@
   flex-wrap: wrap;
 }
 
-.dabb-schedule__title {
+.festival-schedule__title {
   margin: 0;
   font-size: clamp(2.2rem, 4vw, 3rem);
   line-height: 1.05;
@@ -79,7 +79,7 @@
   text-transform: uppercase;
 }
 
-.dabb-schedule__copy {
+.festival-schedule__copy {
   max-width: 420px;
   margin: 0;
   font-size: 1rem;
@@ -87,7 +87,7 @@
   color: #b0b0b0;
 }
 
-.dabb-schedule__table {
+.festival-schedule__table {
   max-width: 1200px;
   margin: 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -100,7 +100,7 @@
   z-index: 1;
 }
 
-.dabb-schedule__row {
+.festival-schedule__row {
   display: grid;
   grid-template-columns: minmax(140px, 0.9fr) 1fr 1fr 1fr;
   gap: 1rem;
@@ -109,18 +109,18 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.dabb-schedule__row--head {
+.festival-schedule__row--head {
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.03);
 }
 
-.dabb-schedule__cell {
+.festival-schedule__cell {
   font-size: 1rem;
   color: #d9d9d9;
 }
 
-.dabb-schedule__cell--time {
+.festival-schedule__cell--time {
   color: #f7f6f2;
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
@@ -128,7 +128,7 @@
   letter-spacing: 0.04em;
 }
 
-.dabb-schedule__row--head .dabb-schedule__cell {
+.festival-schedule__row--head .festival-schedule__cell {
   color: #8c8c88;
   font-size: 0.86rem;
   font-weight: 700;
@@ -137,17 +137,18 @@
 }
 
 @media (max-width: 840px) {
-  .dabb-schedule__row {
+  .festival-schedule__row {
     grid-template-columns: 1fr;
     gap: 0.5rem;
     padding: 1rem 0;
   }
 
-  .dabb-schedule__row--head {
+  .festival-schedule__row--head {
     display: none;
   }
 
-  .dabb-schedule__cell--time {
+  .festival-schedule__cell--time {
     color: #cda467;
   }
 }
+

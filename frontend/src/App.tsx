@@ -1,31 +1,31 @@
 import './App.css'
-import { DabbLoungeHero } from './components/sections/DabbLoungeHero'
-import { DabbLoungeLineup } from './components/sections/DabbLoungeLineup'
-import { DabbLoungeSchedule } from './components/sections/DabbLoungeSchedule'
-import { DabbLoungeExperience } from './components/sections/DabbLoungeExperience'
-import { DabbLoungeVenue } from './components/sections/DabbLoungeVenue'
+import { FestivalHero } from './components/sections/FestivalHero'
+import { FestivalLineup } from './components/sections/FestivalLineup'
+import { FestivalSchedule } from './components/sections/FestivalSchedule'
+import { FestivalExperience } from './components/sections/FestivalExperience'
+import { FestivalVenue } from './components/sections/FestivalVenue'
 
 function App() {
   return (
     <>
       <section id="hero">
-        <DabbLoungeHero />
+        <FestivalHero />
       </section>
 
       <section id="schedule">
-        <DabbLoungeSchedule />
+        <FestivalSchedule />
       </section>
 
       <section id="lineup">
-        <DabbLoungeLineup />
+        <FestivalLineup />
       </section>
 
       <section id="experience">
-        <DabbLoungeExperience />
+        <FestivalExperience />
       </section>
 
       <section id="venue">
-        <DabbLoungeVenue />
+        <FestivalVenue />
       </section>
 
     </>
@@ -33,3 +33,4 @@ function App() {
 }
 
 export default App
+

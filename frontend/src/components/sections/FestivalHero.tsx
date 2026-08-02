@@ -1,8 +1,8 @@
-import { useEffect, useRef, type MouseEvent } from 'react'
+import { useLayoutEffect, useRef, type MouseEvent } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLenis } from 'lenis/react'
-import './DabbLoungeHero.css'
+import './FestivalHero.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,7 +17,7 @@ const navItems = [
   { label: 'Experience', href: '#experience' },
 ]
 
-export function DabbLoungeHero() {
+export function FestivalHero() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const imageRef = useRef<HTMLImageElement | null>(null)
   const overlayRef = useRef<HTMLDivElement | null>(null)
@@ -44,7 +44,7 @@ export function DabbLoungeHero() {
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const section = sectionRef.current
     if (!section) return
 
@@ -101,49 +101,28 @@ export function DabbLoungeHero() {
     return () => ctx.revert()
   }, [])
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const resetScroll = () => {
-      if (window.location.hash) {
-        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`)
-      }
-
-      window.scrollTo(0, 0)
-
-      if (lenis) {
-        lenis.scrollTo(0, { immediate: true })
-      }
-    }
-
-    resetScroll()
-    window.addEventListener('load', resetScroll)
-
-    return () => window.removeEventListener('load', resetScroll)
-  }, [lenis])
-
   return (
-    <section className="dabb-hero" ref={sectionRef} aria-label="Dabb Lounge festival landing">
-      <div className="dabb-hero__backdrop" aria-hidden="true">
-        <img className="dabb-hero__image" ref={imageRef} src={splashImage} alt="" />
-        <div className="dabb-hero__overlay" ref={overlayRef} />
+    <section className="festival-hero" ref={sectionRef} aria-label="Festival Lines landing">
+      <div className="festival-hero__backdrop" aria-hidden="true">
+        <img className="festival-hero__image" ref={imageRef} src={splashImage} alt="" />
+        <div className="festival-hero__overlay" ref={overlayRef} />
       </div>
 
-      <div className="dabb-hero__content" ref={contentRef}>
-        <div className="dabb-hero__title-block" ref={titleBlockRef}>
-          <h1 className="dabb-hero__headline">DABB LOUNGE</h1>
+      <div className="festival-hero__content" ref={contentRef}>
+        <div className="festival-hero__title-block" ref={titleBlockRef}>
+          <h1 className="festival-hero__headline">FESTIVAL LINES</h1>
         </div>
 
-        <div className="dabb-hero__details" ref={detailsRef}>
-          <p className="dabb-hero__date">JUNE 20-22, 2028</p>
-          <span className="dabb-hero__divider" aria-hidden="true" />
-          <p className="dabb-hero__venue">ATELIER BRUCKNER, STUTTGART</p>
+        <div className="festival-hero__details" ref={detailsRef}>
+          <p className="festival-hero__date">JUNE 20-22, 2028</p>
+          <span className="festival-hero__divider" aria-hidden="true" />
+          <p className="festival-hero__venue">ATELIER BRUCKNER, STUTTGART</p>
         </div>
 
-        <nav className="dabb-hero__nav" ref={navRef} aria-label="Festival sections">
+        <nav className="festival-hero__nav" ref={navRef} aria-label="Festival sections">
           {navItems.map((item, index) => (
             <a
-              className="dabb-hero__pill"
+              className="festival-hero__pill"
               href={item.href}
               key={item.label}
               onClick={(event) => handleSectionLink(event, item.href)}
@@ -156,11 +135,12 @@ export function DabbLoungeHero() {
           ))}
         </nav>
 
-        <a className="dabb-hero__cta" href="#lineup" onClick={(event) => handleSectionLink(event, '#schedule')} ref={ctaRef}>
+        <a className="festival-hero__cta" href="#lineup" onClick={(event) => handleSectionLink(event, '#schedule')} ref={ctaRef}>
           <span>Enter</span>
-          <img className="dabb-hero__arrow" src={arrowRightImage} alt="" />
+          <img className="festival-hero__arrow" src={arrowRightImage} alt="" />
         </a>
       </div>
     </section>
   )
 }
+
