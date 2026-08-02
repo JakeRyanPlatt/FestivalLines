@@ -1,0 +1,7 @@
+# AI instruction files
+copilot-instructions.md
+.github/copilot-instructions.md
+.github/chatmodes/*.chatmode.md
+.github/**/*.instructions.md
+.github/**/*.prompt.md
+.github/**/*.agent.md

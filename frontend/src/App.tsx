@@ -1,36 +1,33 @@
-import { useState } from 'react'
 import './App.css'
-import LineupWireframe from './components/LineupWireframe'
-import RevealPatternsDemo from './components/RevealPatternsDemo'
+import { DabbLoungeHero } from './components/sections/DabbLoungeHero'
+import { DabbLoungeLineup } from './components/sections/DabbLoungeLineup'
+import { DabbLoungeSchedule } from './components/sections/DabbLoungeSchedule'
+import { DabbLoungeExperience } from './components/sections/DabbLoungeExperience'
+import { DabbLoungeVenue } from './components/sections/DabbLoungeVenue'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <h1>Festival App with Lenis</h1>
-        <p>Scroll down to see smooth scrolling in action.</p>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((c) => c + 1)}
-        >
-          Count is {count}
-        </button>
+      <section id="hero">
+        <DabbLoungeHero />
+      </section>
+
+      <section id="schedule">
+        <DabbLoungeSchedule />
       </section>
 
       <section id="lineup">
-        <LineupWireframe />
+        <DabbLoungeLineup />
       </section>
 
-      <section id="motion-starter">
-        <RevealPatternsDemo />
+      <section id="experience">
+        <DabbLoungeExperience />
       </section>
 
-      <section id="spacer">
-        <p>More content down here to make the page scroll.</p>
+      <section id="venue">
+        <DabbLoungeVenue />
       </section>
+
     </>
   )
 }
