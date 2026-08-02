@@ -1,6 +1,6 @@
 # Festival Lines
 
-This is a pretty chill little project for showing off a festival lineup in a way that feels a bit more alive than a plain old static page. The idea is to keep things smooth, easy to explore, and a little more fun to browse.
+This is a project for showing off a festival lineup in a way that feels a bit more alive than a plain old static page. The idea is to keep things smooth, easy to explore, and a little more fun to browse.
 
 ## What’s in it
 
