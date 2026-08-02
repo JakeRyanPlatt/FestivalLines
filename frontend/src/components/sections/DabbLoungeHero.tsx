@@ -57,12 +57,12 @@ export function DabbLoungeHero() {
       ].filter(Boolean)
 
       gsap.from(entranceTargets, {
-        y: 24,
+        y: 32,
         opacity: 0,
-        duration: 1.4,
+        duration: 1.8,
         ease: 'power3.out',
-        stagger: 0.08,
-        delay: 0.12,
+        stagger: 0.12,
+        delay: 0.2,
       })
 
       gsap.timeline({
