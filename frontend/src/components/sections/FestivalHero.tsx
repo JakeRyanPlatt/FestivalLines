@@ -6,10 +6,8 @@ import './FestivalHero.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const splashImage =
-  'https://www.figma.com/api/mcp/asset/9571fbb9-574d-4e72-9d79-952d32a4455e'
-const arrowRightImage =
-  'https://www.figma.com/api/mcp/asset/a884d2a4-b19a-4468-bd6d-004511cf47bc'
+const splashImage = '/assets/images/atlierbruckner.png'
+const arrowRightImage = '/assets/icons/arrow-right.svg'
 
 const navItems = [
   { label: 'Schedule', href: '#schedule' },

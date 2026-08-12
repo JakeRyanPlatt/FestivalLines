@@ -9,26 +9,22 @@ const cards = [
   {
     title: 'Intimate Lounge',
     copy: 'Candlelit corners, velvet seating, and soft ambient light for late-night conversations.',
-    image:
-      'https://www.figma.com/api/mcp/asset/069f01b3-62ad-4680-b196-6a7d15d2d022',
+    image: '/assets/images/intimatelounge.png',
   },
   {
     title: 'Marble Bar',
     copy: 'A polished dark marble bar with brass fixtures, premium pours, and warm, intimate lighting.',
-    image:
-      'https://www.figma.com/api/mcp/asset/6128870b-5176-459e-a6b3-8485f5b1dfd9',
+    image: '/assets/images/marblebar.png',
   },
   {
     title: 'Velvet Lounge',
     copy: 'Deep velvet seating areas with soft diffused light, perfect for relaxing between sets.',
-    image:
-      'https://www.figma.com/api/mcp/asset/22f470f7-9e6f-43c6-8bc4-1a415f59dcb2',
+    image: '/assets/images/velvetlounge.png',
   },
   {
     title: 'Night Garden',
     copy: 'An atmospheric glass-walled space at night, with warm tones and soft reflections.',
-    image:
-      'https://www.figma.com/api/mcp/asset/cb50f46a-3762-46aa-843a-930a729520b8',
+    image: '/assets/images/nightgarden.png',
   },
 ]
 
