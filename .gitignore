@@ -5,3 +5,15 @@ copilot-instructions.md
 .github/**/*.instructions.md
 .github/**/*.prompt.md
 .github/**/*.agent.md
+
+# IDE / Rider
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstate
+*.sln.iml
+
+# .NET build artifacts
+**/bin/
+**/obj/
