@@ -77,7 +77,7 @@ export function FestivalVenue() {
         <div className="festival-venue__image-wrap" aria-hidden="true">
           <img
             className="festival-venue__image"
-            src="https://www.figma.com/api/mcp/asset/b542d229-60b1-4a95-af98-61997967ccde"
+            src="/assets/images/atlierbruckner.png"
             alt=""
           />
           <div className="festival-venue__image-overlay" />
