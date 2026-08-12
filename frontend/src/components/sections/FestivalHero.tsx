@@ -132,10 +132,25 @@ export function FestivalHero() {
             </a>
           ))}
         </nav>
+        <a
+            className="festival-hero__cta blob-btn blob-btn--primary"
+            href="#lineup"
+            onClick={(event) => handleSectionLink(event, '#schedule')}
+            ref={ctaRef}
+        >
+  <span className="blob-btn__inner">
+    <span className="blob-btn__blobs">
+      <span className="blob-btn__blob" />
+      <span className="blob-btn__blob" />
+      <span className="blob-btn__blob" />
+      <span className="blob-btn__blob" />
+    </span>
+  </span>
 
-        <a className="festival-hero__cta" href="#lineup" onClick={(event) => handleSectionLink(event, '#schedule')} ref={ctaRef}>
-          <span>Enter</span>
-          <img className="festival-hero__arrow" src={arrowRightImage} alt="" />
+          <span className="blob-btn__label">
+    <span>Enter</span>
+    <img className="festival-hero__arrow" src={arrowRightImage} alt="" />
+  </span>
         </a>
       </div>
     </section>
