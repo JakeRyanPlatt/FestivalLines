@@ -1,15 +1,13 @@
 /* .NET target framework for the code: net8.0
 
-This is a simple .NET 8 minimal API that serves mock data for a festival schedule.
-It defines a single GET endpoint that returns a list of festival events in JSON format.
-The ScheduleRow interface defines the structure of each festival event.
-Includes properties for Id, Name, Location, Day, Stage, and Time.
-
+- This is a simple .NET 10  API that data for a festival schedule.
+- It defines a  GET endpoint that returns a list of festival events in JSON format.
+- The ScheduleRow interface defines the structure of each festival event.
+- Includes properties for Id, Name, Location, Day, Stage, and Time.
+## Packages 
+    - Npsql.EntityFrameworkCore.PostgreSQL
+    - Microsoft.EntityFrameworkCore.Design
  */
-
-
-
-
 // vite dev server: http[:]//localhost[:]5173
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
@@ -19,26 +17,33 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 app.UseCors();
+var cest = TimeSpan.FromHours(2); // Central European Summer Time (UTC+02:00)
+// T() Local function is there so entries don't turn into a wall of repeated new DateTimeOffset(...) calls
+DateTimeOffset T(int day, int hour, int minute) => new DateTimeOffset(2026, 6, day, hour, minute, 0, cest);
 
-// Hard-coded mock data endpoint
-/*
- Festival/Performance tables will look like this:
- */
 
-var festivals = new[]
+//  Entites
+public class Festival
 {
-    new FestivalDto("dabb-lounge", "Dabb Lounge", "2026-06-20", "2026-06-22", "Atelier Bruckner, Stuttgart"),
-};
+    public int Id { get; set; }
+    public string Slug { get; set; }
+    public string Name { get; set; }
+    public string StartDate { get; set; }
+    public string EndDate { get; set; }
+    public string Location { get; set; }
+    
+    public List<>Performance> Performances {
+        get;
+        set;
+    } = []
+}
 
-var lineup = new[]
+public class Performance
 {
-    new PerformanceDto("Massive Attack", "The Monolith (Main)", "Full Weekend"),
-    new PerformanceDto("Nine Inch Nails", "The Monolith (Main)", "Full Weekend"),
-    new PerformanceDto("Björk", "The Monolith (Main)", "Full Weekend"),
-    new PerformanceDto("Peggy Gou", "The Monolith (Main)", "Friday Jun 20"),
-    new PerformanceDto("Four Tet", "The Resonance Dome", "Saturday Jun 21"),
+    public int Id { get; set; }
+    public int FestivalId
+}
 
-};
 
 app.MapGet("/api/festivals", () => festivals);
 
@@ -48,5 +53,5 @@ app.MapGet("/api/festivals/{slug}/lineup", (string slug) =>
 app.Run();
 
 record FestivalDto(string Slug, string Name, string StartDate, string EndDate, string Location);
-record PerformanceDto(string Name, string Stage, string Day);
+record PerformanceDto(string PerformerName, string StageName, DateTimeOffset StartTime, DateTimeOffset? EndTime);
 
