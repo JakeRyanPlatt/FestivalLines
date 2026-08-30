@@ -6,6 +6,7 @@ copilot-instructions.md
 .github/**/*.prompt.md
 .github/**/*.agent.md
 
+# .NET build artifacts
 # IDE / Rider
 .idea/
 *.suo
@@ -13,7 +14,22 @@ copilot-instructions.md
 *.userosscache
 *.sln.docstate
 *.sln.iml
-
-# .NET build artifacts
 **/bin/
 **/obj/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
