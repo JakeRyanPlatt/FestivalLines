@@ -12,8 +12,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<FestivalDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("Default")
-            ?? throw new InvalidOperationException("Connection string 'Default' was not found. Check dotnet user-secrets list."),
+        builder.Configuration.GetConnectionString("DefaultConnection")
+            ?? throw new InvalidOperationException("Connection string 'DefaultConnection' was not found. Check dotnet user-secrets list."),
         npgsql => npgsql
             .EnableRetryOnFailure()
             .MaxBatchSize(1)));

@@ -1,4 +1,5 @@
 import './FestivalSchedule.css'
+import { useState } from 'react'
 
 interface ScheduleRow {
   time: string
@@ -16,6 +17,15 @@ const SCHEDULE: ScheduleRow[] = [
 ]
 
 export function FestivalSchedule() {
+  const [reservedCounts, setReservedCounts] = useState<Record<string, number>>({})
+
+  function reserve(performanceId: string) {
+    setReservedCounts((currentCounts) => ({
+      ...currentCounts,
+      [performanceId]: (currentCounts[performanceId] ?? 0) + 1,
+    }))
+  }
+
   return (
     <section className="festival-schedule" aria-labelledby="festival-schedule-title">
       <div className="festival-schedule__header">
@@ -57,15 +67,19 @@ export function FestivalSchedule() {
             <div className="festival-schedule__cell festival-schedule__cell--time" role="cell">
               {row.time}
             </div>
-            <div className="festival-schedule__cell" role="cell">
-              {row.monolith}
-            </div>
-            <div className="festival-schedule__cell" role="cell">
-              {row.canyon}
-            </div>
-            <div className="festival-schedule__cell" role="cell">
-              {row.dome}
-            </div>
+            {[['monolith', row.monolith], ['canyon', row.canyon], ['dome', row.dome]].map(([venue, artist]) => {
+              const performanceId = `${row.time}-${venue}`
+
+              return (
+                <div className="festival-schedule__cell" role="cell" key={performanceId}>
+                  <div>{artist}</div>
+                  <button type="button" onClick={() => reserve(performanceId)}>
+                    Reserve
+                  </button>
+                  <div>{reservedCounts[performanceId] ?? 0} reserved</div>
+                </div>
+              )
+            })}
           </div>
         ))}
       </div>

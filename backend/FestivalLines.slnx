@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FestivalLines.Tests/FestivalLines.Tests.csproj" />
+  <Project Path="FestivalLineupAPI/FestivalLineupAPI.csproj" />
+</Solution>
