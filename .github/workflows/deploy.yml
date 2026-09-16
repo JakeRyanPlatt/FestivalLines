@@ -39,6 +39,7 @@ jobs:
             fi
 
             export APP_PORT=$APP_PORT
+            export DB_PASSWORD=$DB_PASSWORD
             sudo docker compose up -d --build
         env:
           APP_PORT: ${{ secrets.APP_PORT }}
