@@ -22,23 +22,23 @@ jobs:
           port: 22
           envs: APP_PORT
           script: |
-            # Install Docker if not there
             if ! command -v docker &> /dev/null
             then
               sudo apt-get update
               sudo apt-get install -y docker.io docker-compose-plugin
-            sudo systemctl enable -now docker
-            sudo usermod -aG docker $USER
+              sudo systemctl enable --now docker
+              sudo usermod -aG docker $USER
             fi
-            
+
             mkdir -p ~/festivallines
             cd ~/festivallines
-            if [ -d ".git"]; then
-              git pull origin main 
+            if [ -d ".git" ]; then
+              git pull origin main
             else
               git clone https://github.com/JakeRyanPlatt/FestivalLines.git .
             fi
+
             export APP_PORT=$APP_PORT
             docker compose up -d --build
-          env:
-            APP_PORT: ${{ secrets.APP_PORT }}
+        env:
+          APP_PORT: ${{ secrets.APP_PORT }}
