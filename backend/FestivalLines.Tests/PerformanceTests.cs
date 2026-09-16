@@ -9,6 +9,7 @@ public class PerformanceTests
 - Name, Stage, Times
 */
 
+
     [Fact]
     public void Constructor_SetsAllFieldsCorrectly()
     {
