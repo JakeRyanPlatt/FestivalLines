@@ -5,6 +5,7 @@ copilot-instructions.md
 .github/**/*.instructions.md
 .github/**/*.prompt.md
 .github/**/*.agent.md
+.gitub/**/*.AGENTS.md
 
 # .NET build artifacts
 # IDE / Rider
